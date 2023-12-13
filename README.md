@@ -1,6 +1,6 @@
 Hello Folks,
 
-With help of Tanay Pratab, i have created  a simple website that will CALCULATE PROFIT AND LOSS.
+With help of Tanay Pratab, I have created  a simple website that will CALCULATE PROFIT AND LOSS.
 
 What i have used
 
