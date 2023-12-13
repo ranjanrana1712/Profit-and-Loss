@@ -5,8 +5,41 @@ header {
     font-size: 60px;
     margin-top: 50px;
 }
+main {
+    margin-top: 30px;
+}
 
 main label {
     display: block;
     padding-bottom: 1rem;
 }
+
+body {
+    background-color: lightgray;
+    color: black;
+}
+#stocks-quantity-label ,#current-Price-label , #initial-price-label{
+    font-size: medium;
+}
+
+#initial-price, #stocks-quantity, #current-Price {
+    border-radius: 8px;
+    display: flex;
+    background-color: lightyellow;
+    margin-top: 20px;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    padding: 10px 20px;
+
+}
+#button {
+    margin: 20px;
+    padding: 7px 14px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+
+
+

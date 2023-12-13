@@ -5,62 +5,55 @@
 // Output
 
 
-const initialPrice = document.querySelector('#intial-price');
+const initialPrice = document.querySelector('#initial-price');
 
 const stockQuantity = document.querySelector('#stocks-quantity');
 
-const currentPrice = document.querySelector('currentPrice');
+const currentPrice = document.querySelector('#current-Price');
 
 const submitBtn = document.querySelector('#button');
 
 const outputBox = document.querySelector('#output');
 
 
-// function profit(){
-//     const profitValue = currentPrice - initialPrice;
-//     return profitValue;
-// }
-
-// function profitPr(){
-//     const profitPer = (profitValue/initialPrice) * 100;
-//     return profitPer;
-// }
-
-// function loss(){
-//     const lossValue = initialPrice - currentPrice;
-//     return lossValue;
-// }
-
-// function losspr(){
-//     const lossPer = (lossValue/currentPrice)*100;
-//     return lossPer;
-// }
 
 submitBtn.addEventListener('click' ,submitHandler);
 
 function submitHandler(){
-    const ip = Number(initialPrice.value);
-    const qty = Number(stockQuantity.value);
-    const curr = Number(currentPrice.value);
+    const ip = initialPrice.value;
+    const qty =(stockQuantity.value);
+    const curr = (currentPrice.value);
+
+    
+    
+
+    if(isNaN(ip)|| isNaN(qty)|| isNaN(curr) ){
+        showOutput('enter valid number');
+        return;
+    }
     calculateProfitLoss(ip, qty, curr);
 }
+
 
 function calculateProfitLoss(initial, quantity, current) {
     if (initial > current) {
         var loss = (initial - current)*quantity;
 
-        var lossPer = (loss/current) * 100;
+        var lossPer = (loss/ (current * quantity)) * 100;
 
-        console.log(`hey the loss is ${loss} and the percent is ${lossPer}%`)
+        showOutput(`hey the loss is ${loss} and the percent is ${lossPer.toFixed(2)}%`)
     }
-    else if(initial < current){
+    else if(current > initial){
         var profit = (current - initial)*quantity;
-        var profitPer = (profit/current)*100;
-        console.log(`hey the profit is ${profit} and profit percentage is ${profitPer}%`)
+        var profitPer = ((profit / current * quantity))*100;
+        showOutput(`hey the profit is ${profit} and profit percentage is ${profitPer.toFixed(2)}%`)
     }
     else {
-        console.log('No pain no gain no gain no pain');
-
+        showOutput('No pain no gain no gain no pain');
     }
+}
+
+function showOutput(message) {
+    outputBox.innerHTML = message;
 }
 
