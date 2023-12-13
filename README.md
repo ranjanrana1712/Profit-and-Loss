@@ -11,5 +11,4 @@ What i have used
 
 
 
-<img ![photo](https://github.com/ranjanrana1712/Profit-and-Loss/assets/116024984/952c9923-ea56-40b8-991f-5c420f73cbba)
-src="https://github.com/ranjanrana1712/clock/assets/116024984/741f4a40-1a0d-40a3-874f-7caf86f3a3fe." width="700" height="600" left = " 40%">    <br> 
+ ![photo](https://github.com/ranjanrana1712/Profit-and-Loss/assets/116024984/952c9923-ea56-40b8-991f-5c420f73cbba)
